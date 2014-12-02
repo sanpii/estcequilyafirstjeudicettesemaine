@@ -50,3 +50,8 @@ assetic:
                 - '@AppBundle/Resources/public/lib/angular/angular.min.js'
                 - '@AppBundle/Resources/public/lib/angular-route/angular-route.min.js'
                 - '@AppBundle/Resources/public/lib/angular-resource/angular-resource.min.js'
+        app:
+            inputs:
+                - '@AppBundle/Resources/public/js/services.js'
+                - '@AppBundle/Resources/public/js/controller.js'
+                - '@AppBundle/Resources/public/js/app.js'
