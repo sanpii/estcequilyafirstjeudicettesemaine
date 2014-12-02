@@ -1,3 +1,7 @@
 services:
     first_jeudi:
         class: AppBundle\Service\FirstJeudi
+
+    api_controller:
+        class: AppBundle\Controller\ApiController
+        arguments: ['@first_jeudi']
