@@ -42,7 +42,7 @@ assetic:
         #yui_css:
         #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
     assets:
-        angular_css:
+        angular_style:
             inputs:
                 - '@AppBundle/Resources/public/lib/angular/angular-csp.css'
         angular_js:
