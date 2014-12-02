@@ -1,0 +1,13 @@
+<div ng-if="info.is_first_jeudi">
+    <h1>Oui, c’est même aujourd’hui !</h1>
+    <img src="/bundles/app/img/first-jeudi.gif" alt="" />
+</div>
+<div ng-if="info.is_first_week">
+    <h1>Oui</h1>
+    <img src="/bundles/app/img/first-week.gif" alt="" />
+</div>
+<div ng-if="!info.is_first_jeudi && !info.is_first_week">
+    <h1>Non</h1>
+    <img src="/bundles/app/img/no.gif" alt="" />
+    <p>Mais tu peux toujours venir troller sur <a href="http://irc.lc/freenode/firstJnantes/">#firstJnantes</a></p>
+</div>
