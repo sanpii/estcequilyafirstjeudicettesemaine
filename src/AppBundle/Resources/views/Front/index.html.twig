@@ -5,13 +5,13 @@ Est ce qu’il y a first jeudi cette semaine ?
 {% endblock %}
 
 {% block stylesheets %}
-    {% stylesheets '@angular_style' %}
+    {% stylesheets '@angular_style' '@app_style' %}
         <link href="{{ asset_url }}" rel="stylesheet" />
     {% endstylesheets %}
 {% endblock %}
 
 {% block javascripts %}
-    {% javascripts '@angular_js' '@app' %}
+    {% javascripts '@angular_js' '@app_js' %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}
