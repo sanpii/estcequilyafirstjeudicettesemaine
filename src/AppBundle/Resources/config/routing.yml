@@ -1,3 +1,9 @@
-api_index:
+api_options_index:
     path: /api
-    defaults: { _controller: api_controller:indexAction }
+    defaults: { _controller: api_controller:optionsIndexAction }
+    methods: [OPTIONS]
+
+api_get_index:
+    path: /api
+    defaults: { _controller: api_controller:getIndexAction }
+    methods: [GET]

@@ -2,6 +2,11 @@ services:
     first_jeudi:
         class: AppBundle\Service\FirstJeudi
 
+    cors:
+        class: AppBundle\EventListener\CorsResponseListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+
     api_controller:
         class: AppBundle\Controller\ApiController
         arguments: ['@first_jeudi']

@@ -14,7 +14,19 @@ class ApiController
         $this->firstJeudi = $firstJeudi;
     }
 
-    public function indexAction()
+    public function optionsIndexAction()
+    {
+        return new Response(
+            '',
+            Response::HTTP_NO_CONTENT,
+            [
+                'Access-Control-Allow-Headers' => 'Content-Type',
+                'Access-Control-Allow-Methods' => 'GET',
+            ]
+        );
+    }
+
+    public function getIndexAction()
     {
         return new Response(
             json_encode($this->firstJeudi->toArray()),
