@@ -1,1 +1,21 @@
 {% extends 'base.html.twig' %}
+
+{% block title %}
+Est ce qu’il y a first jeudi cette semaine ?
+{% endblock %}
+
+{% block stylesheets %}
+    {% stylesheets '@angular_css' %}
+        <link href="{{ asset_url }}" rel="stylesheet" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts '@angular_js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block body %}
+    <div ng-view></div>
+{% endblock %}

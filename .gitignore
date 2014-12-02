@@ -11,3 +11,4 @@
 /bin/
 /composer.phar
 /composer.lock
+/src/AppBundle/Resources/public/lib
