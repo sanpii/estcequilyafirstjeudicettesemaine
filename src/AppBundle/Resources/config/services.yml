@@ -1,0 +1,3 @@
+services:
+    first_jeudi:
+        class: AppBundle\Service\FirstJeudi
