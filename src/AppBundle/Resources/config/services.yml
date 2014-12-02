@@ -10,3 +10,7 @@ services:
     api_controller:
         class: AppBundle\Controller\ApiController
         arguments: ['@first_jeudi']
+
+    front_controller:
+        class: AppBundle\Controller\FrontController
+        arguments: ['@templating']

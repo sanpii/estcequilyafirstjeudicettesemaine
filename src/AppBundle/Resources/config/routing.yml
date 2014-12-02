@@ -7,3 +7,8 @@ api_get_index:
     path: /api
     defaults: { _controller: api_controller:getIndexAction }
     methods: [GET]
+
+front_index:
+    path: /
+    defaults: { _controller: front_controller:indexAction }
+    methods: [GET]
