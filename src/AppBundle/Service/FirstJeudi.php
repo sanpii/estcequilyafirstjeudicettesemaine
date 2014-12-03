@@ -18,7 +18,10 @@ class FirstJeudi
     {
         $firstJeudi = $this->getThisFirstJeudi();
 
-        return ($this->now->diff($firstJeudi)->d === 0);
+        return (
+            $this->now->diff($firstJeudi)->d === 0
+            && $this->now->diff($firstJeudi)->h <= 20
+        );
     }
 
     public function isThisWeek()
@@ -54,7 +57,7 @@ class FirstJeudi
     private function getThisFirstJeudi()
     {
         $firstJeudi = clone($this->now);
-        $firstJeudi->modify('first thursday of this month');
+        $firstJeudi->modify('first thursday of this month 20:00:00');
 
         return $firstJeudi;
     }
@@ -62,7 +65,7 @@ class FirstJeudi
     private function getNextFirstJeudi()
     {
         $nextFirstJeudi = clone($this->now);
-        $nextFirstJeudi->modify('first thursday of next month');
+        $nextFirstJeudi->modify('first thursday of next month 20:00:00');
 
         return $nextFirstJeudi;
     }
