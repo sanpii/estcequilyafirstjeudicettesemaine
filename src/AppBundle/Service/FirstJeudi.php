@@ -19,7 +19,8 @@ class FirstJeudi
         $firstJeudi = $this->getThisFirstJeudi();
 
         return (
-            $this->now->diff($firstJeudi)->d === 0
+            $this->now->diff($firstJeudi)->invert === 0
+            && $this->now->diff($firstJeudi)->d === 0
             && $this->now->diff($firstJeudi)->h <= 20
         );
     }

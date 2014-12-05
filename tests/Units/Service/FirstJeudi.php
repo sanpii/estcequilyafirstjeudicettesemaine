@@ -34,6 +34,12 @@ class FirstJeudi extends \Atoum
 
         $this->boolean($firstJeudi->isToday())
             ->isFalse();
+
+        $className = $this->getTestedClassName();
+        $firstJeudi = new $className('2014-12-05 10:00:00');
+
+        $this->boolean($firstJeudi->isToday())
+            ->isFalse();
     }
 
     public function testWeAreNotFirstJeudiWeek()
