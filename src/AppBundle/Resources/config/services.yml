@@ -6,6 +6,10 @@ services:
         class: AppBundle\EventListener\CorsResponseListener
         tags:
             - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+    cache:
+        class: AppBundle\EventListener\CacheResponseListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
 
     api_controller:
         class: AppBundle\Controller\ApiController
