@@ -2,7 +2,7 @@
 
 namespace AppBundle\Test\Units\Service;
 
-class FirstJeudi extends \Atoum
+class Php extends \Atoum
 {
     private $firstJeudi;
 
@@ -15,7 +15,7 @@ class FirstJeudi extends \Atoum
     public function testInit()
     {
         $this->object($this->firstJeudi)
-            ->isInstanceOf('\AppBundle\Service\FirstJeudi');
+            ->isInstanceOf('\AppBundle\Service\Php');
     }
 
     public function testWeAreFirstJeudi()

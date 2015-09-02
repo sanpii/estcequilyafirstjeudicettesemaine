@@ -1,6 +1,6 @@
 services:
     first_jeudi:
-        class: AppBundle\Service\FirstJeudi
+        class: AppBundle\Service\Php
 
     cors:
         class: AppBundle\EventListener\CorsResponseListener
