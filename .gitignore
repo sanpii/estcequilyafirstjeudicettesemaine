@@ -12,3 +12,7 @@
 /composer.phar
 /composer.lock
 /src/AppBundle/Resources/public/lib
+/web/assetic/
+/web/css/
+/web/js/
+/web/images/
