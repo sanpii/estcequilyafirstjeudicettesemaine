@@ -3,34 +3,34 @@
     "license": "Beerware",
     "description": "Est ce qu’il y a first jeudi cette semaine ?",
     "require": {
-        "php": ">=5.4",
-        "symfony/symfony": "~2.6",
-        "twig/extensions": "~1.0",
-        "symfony/assetic-bundle": "~2.3",
-        "sensio/distribution-bundle": "~3.0"
+        "symfony/symfony": "~3.0",
+        "symfony/assetic-bundle": "~2.7",
+        "sensio/distribution-bundle": "~5.0"
     },
     "require-dev": {
         "atoum/atoum": "~1.0"
     },
     "autoload": {
-        "psr-0": { "AppBundle": "src/" }
+        "psr-0": { "AppBundle": "src/" },
+        "classmap": [ "app/AppKernel.php" ]
     },
     "autoload-dev": {
         "psr-4": { "Sanpi\\Test\\Unit\\": "tests/Unit" }
     },
     "scripts": {
-        "post-root-package-install": [
-            "SymfonyStandard\\Composer::hookRootPackageInstall"
-        ],
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-update-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
     },
     "config": {
@@ -38,6 +38,10 @@
     },
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web"
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
+        "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative"
     }
 }
