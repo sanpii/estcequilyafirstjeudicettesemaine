@@ -12,6 +12,10 @@
             {% endimage %}
         </a>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            {% javascripts '@onionify_js' %}
+                <script src="{{ asset_url }}" data-onion="http://t2pq46vd5zazzqjj.onion"></script>
+            {% endjavascripts %}
+        {% endblock %}
     </body>
 </html>

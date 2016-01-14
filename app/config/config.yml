@@ -51,6 +51,9 @@ assetic:
                 - '@AppBundle/Resources/public/lib/angular/angular.min.js'
                 - '@AppBundle/Resources/public/lib/angular-route/angular-route.min.js'
                 - '@AppBundle/Resources/public/lib/angular-resource/angular-resource.min.js'
+        onionify_js:
+            inputs:
+                - '@AppBundle/Resources/public/lib/onionify.js/src/onionify.js'
         app_js:
             inputs:
                 - '@AppBundle/Resources/public/js/services.js'

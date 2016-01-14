@@ -12,6 +12,7 @@ Est ce qu’il y a first jeudi cette semaine ?
 
 {% block javascripts %}
     {% javascripts '@angular_js' '@app_js' %}
+        {{ parent() }}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}
