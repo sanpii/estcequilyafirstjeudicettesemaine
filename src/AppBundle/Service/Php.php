@@ -14,6 +14,18 @@ class Php implements FirstJeudi
         $this->now = $now;
     }
 
+    public function isAperoMaison()
+    {
+        $quadrapero = clone($this->now);
+        $quadrapero->modify('third thursday of this month 19:00:00');
+
+        return (
+            $this->now->diff($quadrapero)->invert === 0
+            && $this->now->diff($quadrapero)->d === 0
+            && $this->now->diff($quadrapero)->h <= 19
+        );
+    }
+
     public function isToday()
     {
         $firstJeudi = $this->getThisFirstJeudi();
@@ -52,6 +64,7 @@ class Php implements FirstJeudi
             'is_first_jeudi' => $this->isToday(),
             'is_first_week' => $this->isThisWeek(),
             'next_first_jeudi' => $this->getNext()->format('Y-m-d'),
+            'is_aperomaison' => $this->isAperoMaison(),
         ];
     }
 

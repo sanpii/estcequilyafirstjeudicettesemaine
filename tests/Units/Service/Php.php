@@ -82,6 +82,16 @@ class Php extends \Atoum
                 'is_first_jeudi' => false,
                 'is_first_week' => true,
                 'next_first_jeudi' => '2014-12-04',
+                'is_aperomaison' => false,
             ]);
+    }
+
+    public function testIsAperoMaison()
+    {
+        $className = $this->getTestedClassName();
+        $firstJeudi = new $className('2016-01-21');
+
+        $this->boolean($firstJeudi->isAperoMaison())
+            ->isIdenticalTo(true);
     }
 }

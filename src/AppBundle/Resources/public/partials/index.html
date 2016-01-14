@@ -7,7 +7,13 @@
     <h1>Oui</h1>
     <img src="/bundles/app/img/first-week.gif" alt="" />
 </div>
-<div ng-if="!info.is_first_jeudi && !info.is_first_week">
+<div ng-if="!info.is_first_jeudi && !info.is_first_week && info.is_aperomaison">
+    <h1>Non, mais il y a apéro maison !</h1>
+    <img src="/bundles/app/img/faimaison.png" alt="Le logo de faimaison" />
+    <p>À partir de 19h dans un lieu différent à chaque fois.</p>
+    <p>Voir <a href="https://www.faimaison.net/">faimaison.net</a> pour plus d’informations</p>
+</div>
+<div ng-if="!info.is_first_jeudi && !info.is_first_week && !info.is_aperomaison">
     <h1>Non</h1>
     <img src="/bundles/app/img/no.gif" alt="" />
     <p>Mais tu peux toujours venir troller sur <a href="http://irc.lc/freenode/firstJnantes/">#firstJnantes</a></p>
