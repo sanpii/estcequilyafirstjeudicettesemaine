@@ -16,6 +16,13 @@
             {% javascripts '@onionify_js' %}
                 <script src="{{ asset_url }}" data-onion="http://t2pq46vd5zazzqjj.onion"></script>
             {% endjavascripts %}
+            {% image '@onionify_img' %}
+                <noscript>
+                    <a href="http://t2pq46vd5zazzqjj.onion" style="position: absolute; top: 0; right: 0; border: 0;">
+                        <img src="{{ asset_url }}" alt="This site has an .onion domain" />
+                    </a>
+                </noscript>
+            {% endimage %}
         {% endblock %}
     </body>
 </html>

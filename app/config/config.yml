@@ -54,6 +54,9 @@ assetic:
         onionify_js:
             inputs:
                 - '@AppBundle/Resources/public/lib/onionify.js/src/onionify.js'
+        onionify_img:
+            inputs:
+                - '@AppBundle/Resources/public/lib/onionify.js/src/ribbon.png'
         app_js:
             inputs:
                 - '@AppBundle/Resources/public/js/services.js'
