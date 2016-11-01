@@ -1,5 +1,5 @@
 BOWER_FLAGS=
-COMPOSER_FLAGS=-n
+COMPOSER_FLAGS=--no-interaction
 
 ifeq ($(APP_ENVIRONMENT),prod)
 	BOWER_FLAGS+=--production
@@ -34,4 +34,4 @@ src/Resources/public/lib: bower.json
 distclean:
 	rm -rf vendor composer.lock src/Resources/public/lib
 
-.PHONY: all assets
+.PHONY: all assets distclean

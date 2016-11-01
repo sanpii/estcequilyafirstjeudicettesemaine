@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace AppBundle\Service;
 
@@ -14,7 +15,7 @@ class Php implements FirstJeudi
         $this->now = $now;
     }
 
-    public function isAperoMaison()
+    public function isAperoMaison(): bool
     {
         $quadrapero = clone($this->now);
         $quadrapero->modify('third thursday of this month 19:00:00');
@@ -26,7 +27,7 @@ class Php implements FirstJeudi
         );
     }
 
-    public function isToday()
+    public function isToday(): bool
     {
         $firstJeudi = $this->getThisFirstJeudi();
 
@@ -37,7 +38,7 @@ class Php implements FirstJeudi
         );
     }
 
-    public function isThisWeek()
+    public function isThisWeek(): bool
     {
         $firstJeudi = $this->getThisFirstJeudi();
         $nextFirstJeudi = $this->getNextFirstJeudi();
@@ -48,7 +49,7 @@ class Php implements FirstJeudi
         );
     }
 
-    public function getNext()
+    public function getNext(): \DateTime
     {
         $firstJeudi = $this->getThisFirstJeudi();
 
@@ -58,7 +59,7 @@ class Php implements FirstJeudi
         return $firstJeudi;
     }
 
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'is_first_jeudi' => $this->isToday(),
@@ -68,7 +69,7 @@ class Php implements FirstJeudi
         ];
     }
 
-    private function getThisFirstJeudi()
+    private function getThisFirstJeudi(): \DateTime
     {
         $firstJeudi = clone($this->now);
         $firstJeudi->modify('first thursday of this month 20:00:00');
@@ -76,7 +77,7 @@ class Php implements FirstJeudi
         return $firstJeudi;
     }
 
-    private function getNextFirstJeudi()
+    private function getNextFirstJeudi(): \DateTime
     {
         $nextFirstJeudi = clone($this->now);
         $nextFirstJeudi->modify('first thursday of next month 20:00:00');

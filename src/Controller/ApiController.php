@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace AppBundle\Controller;
 
@@ -14,7 +15,7 @@ class ApiController
         $this->firstJeudi = $firstJeudi;
     }
 
-    public function optionsIndexAction()
+    public function optionsIndexAction(): Response
     {
         return new Response(
             '',
@@ -26,7 +27,7 @@ class ApiController
         );
     }
 
-    public function getIndexAction()
+    public function getIndexAction(): Response
     {
         return new Response(
             json_encode($this->firstJeudi->toArray()),

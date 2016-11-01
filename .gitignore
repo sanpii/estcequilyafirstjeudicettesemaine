@@ -4,7 +4,7 @@
 !bin/composer
 /composer.phar
 /composer.lock
-/src/AppBundle/Resources/public/lib/
+/src/Resources/public/lib/
 /var/*
 !var/.gitkeep
 /vendor/
